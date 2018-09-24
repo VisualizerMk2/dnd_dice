@@ -13,16 +13,17 @@ def parse_dice_roll(user_dice_roll):
     except ValueError:
         print "Please type in rolls in the format '1d6'."
 
-def add_rolls_and_mod(quantity_of_dice, number_of_sides):
+def create_dice_rolls(quantity_of_dice, number_of_sides):
     rolls = []
     for x in range(quantity_of_dice):
         rolls.append(random.randint(1,number_of_sides))
     return rolls
 
-def print_rolls(quantity_of_dice, number_of_sides):
-    for x in range(quantity_of_dice - 1):
-        print "%d +" % random.randint(1,number_of_sides),
-    print "%d" % random.randint(1,number_of_sides)
+def print_rolls(rolls):
+    iterator = 1
+    for x in rolls:
+        print "Dice %d: ", x % (iterator)
+        iterator += 1
 
 def parse_dice_and_modifier(dice_mod_string):
     num_sides, mod_string = dice_mod_string.split()

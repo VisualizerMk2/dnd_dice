@@ -20,16 +20,16 @@ def create_dice_rolls(quantity_of_dice, number_of_sides):
     return rolls
 
 def print_rolls(rolls):
-    iterator = 1
     for x in rolls:
-        print "Dice %d: ", x % (iterator)
-        iterator += 1
+        print x
+    print '---'
 
 def parse_dice_and_modifier(dice_mod_string):
     num_sides, mod_string = dice_mod_string.split()
     num_sides = int(num_sides)
     mod_sign = mod_string[0]
     modifier = mod_string[1]
+    modifier = int(modifier)
     return num_sides, mod_sign, modifier
 
 parse_dice_roll(user_input)

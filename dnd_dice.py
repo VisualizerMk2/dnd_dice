@@ -1,6 +1,15 @@
 import random
+import re
 
 user_input = raw_input("Enter your roll: ")
+
+def check_input_format(user_dice_roll):
+    #Regex: The order goes at least one digit -> 'd' char -> at least one digit ->
+    #   spaces -> optional '+' or '-' -> spaces -> digits -> spaces
+    #Spaces are not captured for matching
+    #Should be an object of 5 matches
+    regex = r"^(\d+)(d)(\d+)(?:[\s]*)(\+ | \-)?(?:[\s]*)(\d+)?(?:[\s]*)$"
+    regex_matches = re.match(regex, user_dice_roll)
 
 def parse_dice_roll(user_dice_roll):
     """ Takes the user input and parses out the number of dice to be rolled

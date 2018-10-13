@@ -20,7 +20,7 @@ def check_input_format(user_dice_roll):
     if regex_matches == None:
         print "Please enter rolls in the format '2d10 + 3'."
     else:
-        return roll_regex_obj[1], roll_regex_obj[3], roll_regex_obj[4], roll_regex_obj[5]
+        return regex_matches[1], regex_matches[3], regex_matches[4], regex_matches[5]
 
 def create_dice_rolls(quantity_of_dice, number_of_sides):
     rolls = []

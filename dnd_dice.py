@@ -39,7 +39,6 @@ print "User input is: ", user_input
 
 quant_dice, num_sides, modifier_sign, modifier_val = check_input_format(user_input)
 
-print roll_regex_obj
 
 quant_dice = int(quant_dice)
 num_sides = int(num_sides)

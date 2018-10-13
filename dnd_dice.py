@@ -18,9 +18,10 @@ def check_input_format(user_dice_roll):
     #Check for correct input format. If its correct, return the match objectself.
     #   If its incorrect, print a message prompting for re-entry
     if regex_matches == None:
-        print "Please enter rolls in the format '2d10 + 3'."
+        print "hi"
+        #print "Please enter rolls in the format '2d10 + 3'."
     else:
-        print regex_matches[1]
+        print regex_matches.group(1)
         print regex_matches[3]
         print regex_matches[4]
         print regex_matches[5]

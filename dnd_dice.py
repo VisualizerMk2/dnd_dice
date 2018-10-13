@@ -35,7 +35,11 @@ def print_rolls(rolls):
 
 user_input = raw_input("Enter your roll: ")
 
+print "User input is: ", user_input
+
 roll_regex_obj = check_input_format(user_input)
+
+print roll_regex_obj
 
 quant_dice = int(roll_regex_obj[1])
 num_sides = int(roll_regex_obj[3])

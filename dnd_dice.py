@@ -43,3 +43,5 @@ modifier_sign = roll_regex_obj.group(4)
 modifier_val = int(roll_regex_obj.group(5))
 
 rolls = create_dice_rolls(quant_dice, num_sides)
+
+print_rolls(rolls)

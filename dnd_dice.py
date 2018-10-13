@@ -4,6 +4,11 @@ import re
 user_input = raw_input("Enter your roll: ")
 
 def check_input_format(user_dice_roll):
+    """ Takes the user input and matches it against a regex. 
+    Incorrectly formatted rolls will generate an error message.
+
+    Input: A string of the user's inputted dice roll.
+    Output: The regex match object with to be used in generating the dice rolls. """
     #Regex: The order goes: at least one digit -> 'd' char -> at least one digit ->
     #   spaces -> optional '+' or '-' -> spaces -> digits -> spaces
     #Spaces are not captured for matching

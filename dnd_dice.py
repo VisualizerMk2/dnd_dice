@@ -28,6 +28,18 @@ def create_dice_rolls(quantity_of_dice, number_of_sides):
         rolls.append(random.randint(1,number_of_sides))
     return rolls
 
+def add_modifiers(mod_sign, mod_val):
+    if mod_sign == '+':
+        sum = sum(rolls)
+        sum += mod_val
+    elif mod_sign == '-'
+        sum = sum(rolls)
+        sum -= mod_val
+    else:
+        sum = sum(rolls)
+
+    return sum
+
 def print_rolls(rolls):
     for x in rolls:
         print x
@@ -43,3 +55,5 @@ modifier_sign = roll_regex_obj[4]
 modifier_val = int(roll_regex_obj[5])
 
 rolls = create_dice_rolls(quant_dice, num_sides)
+
+sum_rolls_and_mod = add_modifiers(modifier_sign, modifier_val)

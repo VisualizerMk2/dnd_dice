@@ -1,8 +1,6 @@
 import random
 import re
 
-user_input = raw_input("Enter your roll: ")
-
 def check_input_format(user_dice_roll):
     """ Takes the user input and matches it against a regex.
     Incorrectly formatted rolls will generate an error message.
@@ -34,3 +32,7 @@ def print_rolls(rolls):
     for x in rolls:
         print x
     print '---'
+
+user_input = raw_input("Enter your roll: ")
+
+roll_regex_obj = check_input_format(user_input)
